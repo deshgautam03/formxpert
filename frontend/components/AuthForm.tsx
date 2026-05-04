@@ -36,7 +36,9 @@ export default function AuthForm({ type }: AuthFormProps) {
             // Note: In a real app, this would point to the backend URL
             // For now we'll simulate a delay or use a relative path if proxy is set up
             // Assuming backend is on port 5000, we might need a full URL or proxy
-            const backendUrl = "http://localhost:5000";
+            const backendUrl = process.env.NODE_ENV === "production" 
+                ? "https://formxpert-backend.onrender.com" 
+                : "http://localhost:5000";
 
             const res = await fetch(`${backendUrl}${endpoint}`, {
                 method: "POST",
