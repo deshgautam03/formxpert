@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Footer = () => {
     return (
         <footer className="w-full border-t border-slate-800 bg-black py-8">
@@ -6,9 +8,9 @@ const Footer = () => {
                     © {new Date().getFullYear()} FormXpert. All rights reserved.
                 </p>
                 <div className="flex items-center gap-6">
-                    <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">Privacy</a>
-                    <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">Terms</a>
-                    <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">Contact</a>
+                    <Link href="/privacy" className="text-slate-400 hover:text-white text-sm transition-colors">Privacy</Link>
+                    <Link href="/terms" className="text-slate-400 hover:text-white text-sm transition-colors">Terms</Link>
+                    <Link href="/contact" className="text-slate-400 hover:text-white text-sm transition-colors">Contact</Link>
                 </div>
             </div>
         </footer>

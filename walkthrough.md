@@ -47,6 +47,13 @@ FormXpert is a full-stack AI gym assistant. This guide will help you run and ver
    - Verify that the feedback changes ("Good depth!" vs "Go lower").
    - Listen for audio feedback (ensure volume is up).
 
+### Exercise Details Page
+1. Navigate to **Workouts** from the dashboard.
+2. Hover over the **Squat** or **Push Up** exercise card.
+3. Click the newly added **View Details** button.
+4. Verify you are routed to the specific exercise page (e.g., `/exercises/squat`).
+5. Ensure the Framer Motion animations trigger properly and all sections (Hero, Key Info, Why This Exercise, Steps, Precautions, and YouTube Video) render correctly. Validate responsiveness.
+
 ## Troubleshooting
 - **Camera not working**: Ensure no other app is using the camera. Check browser permissions.
 - **Backend connection error**: Ensure the backend server is running on port 5000 and MongoDB is connected.

@@ -52,13 +52,20 @@ export default function WorkoutsPage() {
                                 alt={workout.name}
                                 className="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity"
                             />
-                            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col gap-3 items-center justify-center">
                                 <button
                                     onClick={() => handleStartWorkout(workout.id)}
-                                    className="flex items-center gap-2 px-6 py-3 bg-neon-green text-black font-bold rounded-full transform scale-90 group-hover:scale-100 transition-transform"
+                                    className="flex items-center gap-2 px-6 py-3 bg-neon-green text-black font-bold rounded-full transform scale-90 group-hover:scale-100 transition-transform hover:bg-[#b3ff00]"
                                     suppressHydrationWarning
                                 >
                                     <Play className="w-5 h-5" /> Start
+                                </button>
+                                {/* Only show View Details for hardcoded squat and pushup for now since that's what we have data for, or route generic IDs */}
+                                <button
+                                    onClick={() => router.push(`/exercises/${workout.name.toLowerCase().replace(' ', '')}`)}
+                                    className="flex items-center gap-2 px-6 py-3 bg-slate-800 text-white font-bold rounded-full transform scale-90 group-hover:scale-100 transition-transform hover:bg-slate-700"
+                                >
+                                    View Details
                                 </button>
                             </div>
                         </div>
